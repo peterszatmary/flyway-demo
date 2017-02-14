@@ -70,7 +70,7 @@ How to run the dev migration
 mvn flyway:migrate -P DEV-environment
 ```
 
-[!test migration run](https://github.com/peterszatmary/just-like-that/blob/master/imgs/flyway-demo/test-migration-run.png)
+![test migration run](https://github.com/peterszatmary/just-like-that/blob/master/imgs/flyway-demo/test-migration-run.png)
 
 
 After that is database prepared for application run. Database has schema and inserted data.
@@ -84,7 +84,7 @@ environment=dev
 
 After that you can see application with dev database and data in it.
 
-[!dev app](https://github.com/peterszatmary/just-like-that/blob/master/imgs/flyway-demo/dev-app.png)
+![dev app](https://github.com/peterszatmary/just-like-that/blob/master/imgs/flyway-demo/dev-app.png)
 
 
 
@@ -109,10 +109,11 @@ How to run the test migration
 mvn flyway:migrate -P TEST-environment
 ```
 
-[!test migration run](https://github.com/peterszatmary/just-like-that/blob/master/imgs/flyway-demo/test-migration-run.png)
+![test migration run](https://github.com/peterszatmary/just-like-that/blob/master/imgs/flyway-demo/test-migration-run.png)
 
 
-After that is database prepared for application run. Database has schema and inserted data.
+Before that the database is empty. After that is database prepared for application run. Database
+has schema and inserted data.
 
 
 For app run you need just change in application.properties following
@@ -121,9 +122,10 @@ For app run you need just change in application.properties following
 environment=test
 ```
 
-After that you can see application with test database and data in it.
+Before that the database is empty. After that you can see application with test database and
+data in it.
 
-[!test app](https://github.com/peterszatmary/just-like-that/blob/master/imgs/flyway-demo/test-app.png)
+![test app](https://github.com/peterszatmary/just-like-that/blob/master/imgs/flyway-demo/test-app.png)
 
 
 
@@ -149,7 +151,7 @@ How to run the preprod migration
 mvn flyway:migrate -P PREPROD-environment
 ```
 
-[!preprod migration run](https://github.com/peterszatmary/just-like-that/blob/master/imgs/flyway-demo/preprod-migration-run.png)
+![preprod migration run](https://github.com/peterszatmary/just-like-that/blob/master/imgs/flyway-demo/preprod-migration-run.png)
 
 After that is database prepared for application run. Database has schema and inserted data.
 
@@ -160,14 +162,14 @@ For app run you need just change in application.properties following
 environment=preprod
 ```
 
-After that you can see application with preprod database and data in it.
+Before that the database is empty. After that you can see application with preprod database and data in it.
 
-[!preprod app](https://github.com/peterszatmary/just-like-that/blob/master/imgs/flyway-demo/preprod-app.png)
+![preprod app](https://github.com/peterszatmary/just-like-that/blob/master/imgs/flyway-demo/preprod-app.png)
 
 
 Project structure for flyway multi environment support
 
-[!project structure](https://github.com/peterszatmary/just-like-that/blob/master/imgs/flyway-demo/project-structure.png)
+![project structure](https://github.com/peterszatmary/just-like-that/blob/master/imgs/flyway-demo/project-structure.png)
 
 
 ## 2. SpringBoot app configured for different environments
