@@ -1,6 +1,6 @@
 # flyway-demo
 
-https://travis-ci.org/peterszatmary/flyway-demo.svg?branch=master)](https://travis-ci.org/peterszatmary/flyway-demo)
+[![https://travis-ci.org/peterszatmary/flyway-demo.svg?branch=master)](https://travis-ci.org/peterszatmary/flyway-demo)
 
 Flyway migration library with usefull configurations on Spring-boot.
 
