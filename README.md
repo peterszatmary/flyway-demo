@@ -17,10 +17,9 @@ In this example we have 3 environments dev, test and preprod. All of them have s
 configurations. So in theory they can have different data structure, different data, different db
  drivers.
 
-More obvious is to have same data structures cross environments but different datas. Like in this
- example Spring Boot application.
+More obvious is to have same data structures cross environments but different data. Same like in
+this Spring Boot application example.
 
 For more information see [wiki](https://github.com/peterszatmary/flyway-demo/wiki).
 
-But the configuration is made in very flexible way.
 
