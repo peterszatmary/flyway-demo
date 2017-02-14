@@ -20,7 +20,6 @@ configurations. So in theory they can have different data structure, different d
 More obvious is to have same data structures cross environments but different data. Same like in
 this Spring Boot application example.
 
-For more information see [wiki](https://github.com/peterszatmary/flyway-demo/wiki).
 
 ## 1. Migration with Flyway through different environments
 
@@ -29,7 +28,7 @@ build.
 
 In whole solution i am using vagrant-mysql database.Fill free to use your own.
 
-Main plugin configuration looks like following
+### Main plugin configuration looks like following
 
 ```xml
 <plugin>
@@ -49,7 +48,7 @@ Main plugin configuration looks like following
 
 ```
 
-DEV environment profile
+### DEV environment profile
 
 ```xml
 <profile>
@@ -64,7 +63,7 @@ DEV environment profile
 </profile>
 ```
 
-How to run the dev migration
+### How to run the dev migration
 
 ```
 mvn flyway:migrate -P DEV-environment
@@ -88,7 +87,7 @@ After that you can see application with dev database and data in it.
 
 
 
-TEST environment profile
+### TEST environment profile
 
 ```xml
 <profile>
@@ -103,7 +102,7 @@ TEST environment profile
 </profile>
 ```
 
-How to run the test migration
+### How to run the test migration
 
 ```
 mvn flyway:migrate -P TEST-environment
@@ -130,7 +129,7 @@ data in it.
 
 
 
-PREPROD environment profile
+### PREPROD environment profile
 
 ```xml
 <profile>
@@ -145,7 +144,7 @@ PREPROD environment profile
 </profile>
 ```
 
-How to run the preprod migration
+### How to run the preprod migration
 
 ```
 mvn flyway:migrate -P PREPROD-environment
@@ -167,7 +166,7 @@ Before that the database is empty. After that you can see application with prepr
 ![preprod app](https://github.com/peterszatmary/just-like-that/blob/master/imgs/flyway-demo/preprod-app.png)
 
 
-Project structure for flyway multi environment support
+### Project structure for flyway multi environment support
 
 ![project structure](https://github.com/peterszatmary/just-like-that/blob/master/imgs/flyway-demo/project-structure.png)
 
