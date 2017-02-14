@@ -70,7 +70,7 @@ How to run the dev migration
 mvn flyway:migrate -P DEV-environment
 ```
 
-![test migration run](https://github.com/peterszatmary/just-like-that/blob/master/imgs/flyway-demo/test-migration-run.png)
+![test migration run](https://github.com/peterszatmary/just-like-that/blob/master/imgs/flyway-demo/dev-migration-run.png)
 
 
 After that is database prepared for application run. Database has schema and inserted data.
