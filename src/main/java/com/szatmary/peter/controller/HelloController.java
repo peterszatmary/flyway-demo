@@ -3,6 +3,7 @@ package com.szatmary.peter.controller;
 import com.szatmary.peter.db.repository.PersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
@@ -16,6 +17,9 @@ public class HelloController {
     private String message;
 
     @Autowired
+    private Environment env;
+
+    @Autowired
     private PersonRepository personRepository;
 
     @GetMapping("/")
@@ -23,6 +27,7 @@ public class HelloController {
         model.put("time", new Date());
         model.put("message", this.message);
         model.put("persons", personRepository.findAll());
+        model.put("environment", env.getProperty("environment"));
         return "hello";
     }
 }

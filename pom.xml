@@ -93,7 +93,7 @@
             <id>DEV-environment</id>
             <properties>
                 <db.driver>com.mysql.jdbc.Driver</db.driver>
-                <db.url>jdbc:mysql://33.33.33.1/flywaydemo</db.url>
+                <db.url>jdbc:mysql://33.33.33.1/flywaydemodev</db.url>
                 <db.user>root</db.user>
                 <db.password>root</db.password>
                 <flyway.location>filesystem:src/main/resources/db/migration/dev</flyway.location>

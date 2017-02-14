@@ -3,6 +3,7 @@
 <html lang="en">
 
 <body>
+    <h1>Application in ${environment} mode</h1>
     <strong>Date:</strong> ${time?date}
     <br>
     <strong>Time:</strong> ${time?time}
