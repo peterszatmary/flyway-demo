@@ -2,14 +2,16 @@
 
 [![Build Status](https://travis-ci.org/peterszatmary/flyway-demo.svg?branch=master)](https://travis-ci.org/peterszatmary/flyway-demo)
 
-Flyway migration library with usefull configurations on Spring-boot.
+Flyway migration and database evolving library with useful configurations cross different
+environments on Spring-boot.
 
 Whats interesting here
 
 SpringBoot with
-- Flyway like migration library used cross environments
-- Freemarker like template engine on frontend
+- Flyway like migration library used cross environments (See down)
+- [Freemarker template engine on frontend](https://github.com/peterszatmary/flyway-demo/wiki/Freemarker-with-SpringBoot)
 - Spring data like ORM for data
+- [SpringBoot app configured for different environments](https://github.com/peterszatmary/flyway-demo/wiki/SpringBoot-app-configured-for-different-environments.)
 
 [Flyway](https://flywaydb.org/) is configured via [flyway-maven-plugin](https://mvnrepository.com/artifact/org
 .flywaydb/flyway-maven-plugin) to simply switch between different environments.
@@ -21,12 +23,12 @@ More obvious is to have same data structures cross environments but different da
 this Spring Boot application example.
 
 
-## 1. Migration with Flyway through different environments
+## 1. Migration / evolving with Flyway through different environments
 
 For each environment we create maven profile. Profiles will just set properties for main plugin
 build.
 
-In whole solution i am using vagrant-mysql database.Fill free to use your own.
+In whole solution i am using vagrant-mysql database.Feel free to use your own.
 
 ### Main plugin configuration looks like following
 
@@ -74,6 +76,7 @@ mvn flyway:migrate -P DEV-environment
 
 After that is database prepared for application run. Database has schema and inserted data.
 
+### How to run app with dev database
 
 For app run you need just change in application.properties following
 
@@ -111,9 +114,10 @@ mvn flyway:migrate -P TEST-environment
 ![test migration run](https://github.com/peterszatmary/just-like-that/blob/master/imgs/flyway-demo/test-migration-run.png)
 
 
-Before that the database is empty. After that is database prepared for application run. Database
-has schema and inserted data.
+Before this step the database is empty. After that is database prepared for application run.
+Database has schema and inserted data.
 
+### How to run app with test database
 
 For app run you need just change in application.properties following
 
@@ -121,7 +125,7 @@ For app run you need just change in application.properties following
 environment=test
 ```
 
-Before that the database is empty. After that you can see application with test database and
+Before this step the database is empty. After that you can see application with test database and
 data in it.
 
 ![test app](https://github.com/peterszatmary/just-like-that/blob/master/imgs/flyway-demo/test-app.png)
@@ -154,6 +158,7 @@ mvn flyway:migrate -P PREPROD-environment
 
 After that is database prepared for application run. Database has schema and inserted data.
 
+### How to run app with preprod database
 
 For app run you need just change in application.properties following
 
@@ -161,7 +166,6 @@ For app run you need just change in application.properties following
 environment=preprod
 ```
 
-Before that the database is empty. After that you can see application with preprod database and data in it.
 
 ![preprod app](https://github.com/peterszatmary/just-like-that/blob/master/imgs/flyway-demo/preprod-app.png)
 
@@ -169,16 +173,3 @@ Before that the database is empty. After that you can see application with prepr
 ### Project structure for flyway multi environment support
 
 ![project structure](https://github.com/peterszatmary/just-like-that/blob/master/imgs/flyway-demo/project-structure.png)
-
-
-## 2. SpringBoot app configured for different environments
-
-See application.properties, DbConfig.java for more information.
-
-## 3. Freemarker templating
-
-See hello.ftl, HelloController.java and pom.xml for more information.
-
-
-
-
