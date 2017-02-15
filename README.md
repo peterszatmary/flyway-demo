@@ -5,12 +5,12 @@
 Flyway migration and database evolving library with useful configurations cross different
 environments on Spring-boot.
 
-Whats interesting here
+## Whats interesting here
 
 SpringBoot with
 - Flyway like migration library used cross environments (See down)
 - [Freemarker template engine on frontend](https://github.com/peterszatmary/flyway-demo/wiki/Freemarker-with-SpringBoot)
-- Spring data like ORM for data
+- [Spring data like ORM for data](https://github.com/peterszatmary/flyway-demo/wiki/Spring-data-like-ORM-for-data)
 - [SpringBoot app configured for different environments](https://github.com/peterszatmary/flyway-demo/wiki/SpringBoot-app-configured-for-different-environments.)
 
 [Flyway](https://flywaydb.org/) is configured via [flyway-maven-plugin](https://mvnrepository.com/artifact/org
