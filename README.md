@@ -1,17 +1,18 @@
-# flyway-demo
+# flyway-demo #
 
 [![Build Status](https://travis-ci.org/peterszatmary/flyway-demo.svg?branch=master)](https://travis-ci.org/peterszatmary/flyway-demo)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/81cedd5dfe6247c48e0742a2db3e7b96)](https://www.codacy.com/app/peterszatmary/flyway-demo?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=peterszatmary/flyway-demo&amp;utm_campaign=Badge_Grade)
 
 Flyway migration and database evolving library with useful configurations cross different
 environments on Spring-boot.
 
-## Whats interesting here
+## Whats interesting here ##
 
 SpringBoot with
-- Flyway like migration library used cross environments (See down)
-- [Freemarker template engine on frontend](https://github.com/peterszatmary/flyway-demo/wiki/Freemarker-with-SpringBoot)
-- [Spring data like ORM for data](https://github.com/peterszatmary/flyway-demo/wiki/Spring-data-like-ORM-for-data)
-- [SpringBoot app configured for different environments](https://github.com/peterszatmary/flyway-demo/wiki/SpringBoot-app-configured-for-different-environments.)
+-   Flyway like migration library used cross environments (See down)
+-   [Freemarker template engine on frontend](https://github.com/peterszatmary/flyway-demo/wiki/Freemarker-with-SpringBoot)
+-   [Spring data like ORM for data](https://github.com/peterszatmary/flyway-demo/wiki/Spring-data-like-ORM-for-data)
+-   [SpringBoot app configured for different environments](https://github.com/peterszatmary/flyway-demo/wiki/SpringBoot-app-configured-for-different-environments.)
 
 [Flyway](https://flywaydb.org/) is configured via [flyway-maven-plugin](https://mvnrepository.com/artifact/org
 .flywaydb/flyway-maven-plugin) to simply switch between different environments.
@@ -23,14 +24,14 @@ More obvious is to have same data structures cross environments but different da
 this Spring Boot application example.
 
 
-## 1. Migration / evolving with Flyway through different environments
+## 1. Migration / evolving with Flyway through different environments ##
 
 For each environment we create maven profile. Profiles will just set properties for main plugin
 build.
 
 In whole solution i am using vagrant-mysql database.Feel free to use your own.
 
-### Main plugin configuration looks like following
+### Main plugin configuration looks like following ###
 
 ```xml
 <plugin>
@@ -50,7 +51,7 @@ In whole solution i am using vagrant-mysql database.Feel free to use your own.
 
 ```
 
-### DEV environment profile
+### DEV environment profile ###
 
 ```xml
 <profile>
@@ -65,9 +66,9 @@ In whole solution i am using vagrant-mysql database.Feel free to use your own.
 </profile>
 ```
 
-### How to run the dev migration
+### How to run the dev migration ###
 
-```
+```bash
 mvn flyway:migrate -P DEV-environment
 ```
 
@@ -76,11 +77,11 @@ mvn flyway:migrate -P DEV-environment
 
 After that is database prepared for application run. Database has schema and inserted data.
 
-### How to run app with dev database
+### How to run app with dev database ###
 
 For app run you need just change in application.properties following
 
-```
+```bash
 environment=dev
 ```
 
@@ -88,9 +89,7 @@ After that you can see application with dev database and data in it.
 
 ![dev app](https://github.com/peterszatmary/just-like-that/blob/master/imgs/flyway-demo/dev-app.png)
 
-
-
-### TEST environment profile
+### TEST environment profile ###
 
 ```xml
 <profile>
@@ -105,23 +104,22 @@ After that you can see application with dev database and data in it.
 </profile>
 ```
 
-### How to run the test migration
+### How to run the test migration ###
 
-```
+```bash
 mvn flyway:migrate -P TEST-environment
 ```
 
 ![test migration run](https://github.com/peterszatmary/just-like-that/blob/master/imgs/flyway-demo/test-migration-run.png)
 
-
 Before this step the database is empty. After that is database prepared for application run.
 Database has schema and inserted data.
 
-### How to run app with test database
+### How to run app with test database ###
 
 For app run you need just change in application.properties following
 
-```
+```bash
 environment=test
 ```
 
@@ -130,10 +128,7 @@ data in it.
 
 ![test app](https://github.com/peterszatmary/just-like-that/blob/master/imgs/flyway-demo/test-app.png)
 
-
-
-
-### PREPROD environment profile
+### PREPROD environment profile ###
 
 ```xml
 <profile>
@@ -148,9 +143,9 @@ data in it.
 </profile>
 ```
 
-### How to run the preprod migration
+### How to run the preprod migration ###
 
-```
+```bash
 mvn flyway:migrate -P PREPROD-environment
 ```
 
@@ -158,18 +153,16 @@ mvn flyway:migrate -P PREPROD-environment
 
 After that is database prepared for application run. Database has schema and inserted data.
 
-### How to run app with preprod database
+### How to run app with preprod database ###
 
 For app run you need just change in application.properties following
 
-```
+```bash
 environment=preprod
 ```
 
-
 ![preprod app](https://github.com/peterszatmary/just-like-that/blob/master/imgs/flyway-demo/preprod-app.png)
 
-
-### Project structure for flyway multi environment support
+### Project structure for flyway multi environment support ###
 
 ![project structure](https://github.com/peterszatmary/just-like-that/blob/master/imgs/flyway-demo/project-structure.png)
