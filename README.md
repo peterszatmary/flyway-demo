@@ -14,15 +14,13 @@ SpringBoot with
 -   [Spring data like ORM for data](https://github.com/peterszatmary/flyway-demo/wiki/Spring-data-like-ORM-for-data)
 -   [SpringBoot app configured for different environments](https://github.com/peterszatmary/flyway-demo/wiki/SpringBoot-app-configured-for-different-environments.)
 
-[Flyway](https://flywaydb.org/) is configured via [flyway-maven-plugin](https://mvnrepository.com/artifact/org
-.flywaydb/flyway-maven-plugin) to simply switch between different environments.
+[Flyway](https://flywaydb.org/) is configured via [flyway-maven-plugin](https://mvnrepository.com/artifact/org.flywaydb/flyway-maven-plugin) to simply switch between different environments.
 In this example we have 3 environments dev, test and preprod. All of them have separate
 configurations. So in theory they can have different data structure, different data, different db
  drivers.
 
 More obvious is to have same data structures cross environments but different data. Same like in
 this Spring Boot application example.
-
 
 ## 1. Migration / evolving with Flyway through different environments ##
 
@@ -73,7 +71,6 @@ mvn flyway:migrate -P DEV-environment
 ```
 
 ![test migration run](https://github.com/peterszatmary/just-like-that/blob/master/imgs/flyway-demo/dev-migration-run.png)
-
 
 After that is database prepared for application run. Database has schema and inserted data.
 
